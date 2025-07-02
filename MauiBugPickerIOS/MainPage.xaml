@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBugPickerIOS.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Border>
+                <Picker
+                    x:Name="pckLanguage"
+                    VerticalOptions="Center"
+                    MinimumWidthRequest="160"
+                    VerticalTextAlignment="Center"
+                    SelectedIndexChanged="OnCounterClicked"
+                    IsEnabled="True">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Čeština</x:String>
+                            <x:String>Dansk</x:String>
+                            <x:String>Deutsch</x:String>
+                            <x:String>English</x:String>
+                            <x:String>Español</x:String>
+                            <x:String>Français</x:String>
+                            <x:String>Italiano</x:String>
+                            <x:String>Magyar</x:String>
+                            <x:String>Nederlands</x:String>
+                            <x:String>Norsk</x:String>
+                            <x:String>Polski</x:String>
+                            <x:String>Português</x:String>
+                            <x:String>Română</x:String>
+                            <x:String>Suomi</x:String>
+                            <x:String>Svenska</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Border>
+
+            <!--<Border
+                            Style="{StaticResource borderStyleDefault}"
+                            Grid.Row="2"
+                            Grid.Column="1">
+
+                <Picker
+                                x:Name="pckLanguage"
+                                VerticalOptions="Center"
+                                MinimumWidthRequest="160"
+                                VerticalTextAlignment="Center"
+                                SelectedIndexChanged="OnPickerLanguageChanged"
+                                IsEnabled="True">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Čeština</x:String>
+                            <x:String>Dansk</x:String>
+                            <x:String>Deutsch</x:String>
+                            <x:String>English</x:String>
+                            <x:String>Español</x:String>
+                            <x:String>Français</x:String>
+                            <x:String>Italiano</x:String>
+                            <x:String>Magyar</x:String>
+                            <x:String>Nederlands</x:String>
+                            <x:String>Norsk</x:String>
+                            <x:String>Polski</x:String>
+                            <x:String>Português</x:String>
+                            <x:String>Română</x:String>
+                            <x:String>Suomi</x:String>
+                            <x:String>Svenska</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Border>-->
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
